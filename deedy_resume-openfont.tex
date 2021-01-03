@@ -1,0 +1,213 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Deedy - One Page Two Column Resume
+% LaTeX Template
+% Version 1.2 (16/9/2014)
+%
+% Original author:
+% Debarghya Das (http://debarghyadas.com)
+%
+% Original repository:
+% https://github.com/deedydas/Deedy-Resume
+%
+% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
+%
+% This template uses several fonts not included with Windows/Linux by
+% default. If you get compilation errors saying a font is missing, find the line
+% on which the font is used and either change it to a font included with your
+% operating system or comment the line out to use the default font.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+% TODO:
+% 1. Integrate biber/bibtex for article citation under publications.
+% 2. Figure out a smoother way for the document to flow onto the next page.
+% 3. Add styling information for a "Projects/Hacks" section.
+% 4. Add location/address information
+% 5. Merge OpenFont and MacFonts as a single sty with options.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% CHANGELOG:
+% v1.1:
+% 1. Fixed several compilation bugs with \renewcommand
+% 2. Got Open-source fonts (Windows/Linux support)
+% 3. Added Last Updated
+% 4. Move Title styling into .sty
+% 5. Commented .sty file.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Known Issues:
+% 1. Overflows onto second page if any column's contents are more than the
+% vertical limit
+% 2. Hacky space on the first bullet point on the second column.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\documentclass[]{deedy-resume-openfont}
+\usepackage{fancyhdr}
+ 
+\pagestyle{fancy}
+\fancyhf{}
+ 
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     LAST UPDATED DATE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\lastupdated
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     TITLE NAME
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\namesection{Viet Phuong}{TRAN}{ \urlstyle{same} 
+\href{mailto:tv.phuong.93@gmail.com}{tv.phuong.93@gmail.com} | +33 6 23 54 32 41 | 
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN ONE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{minipage}[t]{0.30\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EDUCATION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Education} 
+
+\subsection{Paris-Saclay University}
+\descript{Master in Embedded systems and Information Processing}
+\location{2017 | Paris, FR}
+\sectionsep
+
+\subsection{INSA de Lyon - Grande Ecole d'Ingénieur}
+\descript{Degree in Electrical Engineering}
+\location{2016 | Lyon, FR}
+
+\sectionsep
+
+\subsection{Hanoi Amsterdam High School}
+\location{ 2011|  Specialized in Physics}
+Third place in National Physics Olympiads.
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     LINKS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Links} 
+LinkedIn: \href{https://www.linkedin.com/in/viet-phuong-tran-512a1887/}{\bf Viet-Phuong TRAN} \\
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     COURSEWORK
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Coursework}
+\subsection{Graduate}
+Advanced Architecture \\
+Parallel Computing (GPU/Multicores) \\
+Advanced Interactive Graphics \\
+Embedded Systems with FPGA \\
+Supervised and Unsupervised Learning \\
+Security/Reliabilty of Embedded System \\
+System on Chip \\
+\sectionsep
+
+\subsection{Undergraduate}
+Signal Processing \\
+System engineering \\
+Power Electronics \\
+Real-Time Systems \\
+C/C++  \\
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN TWO
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{minipage} 
+\hfill
+\begin{minipage}[t]{0.66\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EXPERIENCE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Experience}
+\runsubsection{VALEO VISION}
+\descript{| Embedded Software Engineer - Smart FullLED Headlamps ECU}
+\location{November 2017 - Present | Paris, FR}
+\descript{Clients: GM, PSA, Opel, Ferrari -  \href{https://www.youtube.com/watch?v=z7W_R5bofgE}{\bf Product Demo}}
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+\item "Premium" Platform ECUs, based on AUTOSAR (Targets: 32bits Microcontroller  Renesas RH850/NXP S32K Arm Cortex M4)
+\item Analyze clients requirements, working  closely with system engineers to design a robust system.
+\item Design, Implement, Unit Testing, Integrate SW components.
+\item Respect SW development process according to ASPICE.
+\end{tightemize}
+\sectionsep
+
+\runsubsection{Renault}
+\descript{| Intern - Software Qualimetry }
+\location{April 2017 – August 2017 | Technocentre Guyancourt, FR}
+\begin{tightemize}
+\item Analyze the indicators coming from Quality Assurance in order to construct a quality model for outsourced projects.
+
+\end{tightemize}
+\sectionsep
+
+\runsubsection{CEA - LETI}
+\descript{| Intern - Multigaz sensors based on MEMS technology }
+\location{May 2016 – Sep 2016 | Grenoble, FR}
+\begin{tightemize}
+\item Develop a Prototype (Electronic design + Firmware) for Sensor interfacing and Signals acquisition. Target: Analog Device's Arm Cortex M4.
+\item Develop On-computer dashboard for realtime data analysis with LabView. 
+\end{tightemize}
+\sectionsep
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     SKILLS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Skills}
+\subsection{Programming}
+\location{Professional:}
+C \textbullet{}   C++ \textbullet{} Python (scripting tests) \\ 
+\location{Familiar:} 
+VHDL \textbullet{}  Matlab  \textbullet{} \LaTeX\ \textbullet{} Programming on CUDA \textbullet{} Java \textbullet{} Assembly \\
+\location{Tooling:}
+JTAG Debugging \textbullet{} CM tool SVN/GIT 
+\sectionsep
+
+\subsection{Automotive}
+AUTOSAR Architecture, Model Based Design integration, V-Cycle development, Continuous Integration \\ 
+CAN Network protocol, UDS/XCP diagnostics protocol.
+\sectionsep
+
+\subsection{Interests}
+Yocto Embedded Linux, Machine Learning.
+\sectionsep
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     LANGUAGES
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{LANGUAGES}
+\descript{English: Fluent (TOEIC 990)} 
+\descript{French: Fluent (TCF C1)}
+\sectionsep
+
+\end{minipage} 
+\end{document}  \documentclass[]{article}
